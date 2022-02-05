@@ -1,5 +1,7 @@
-# starter_folder
+# Paper-1 includes:
 
-This repo....
+1. Inputs containing data
 
-It is organised as follows...
+2. Outputs folder containing R markdown and Bibiliography
+
+3. Scripts folder containing R scripts
