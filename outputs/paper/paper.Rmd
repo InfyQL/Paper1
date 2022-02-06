@@ -35,7 +35,7 @@ First we'll look at a snapshot of the data being analyzed in (Table 1 \ref@(tab:
 
 # Data
 
-Data provided from the City of Toronto via the 'opendatatoronto' package, [@citeopendatatoronto] and R language [@citeR], along with tidyverse [@citetidyverse], knitr [@citeknitr], and dplyr [@citedplyr] for document construction and producing tables and figures used.
+Data provided from the City of Toronto via the 'opendatatoronto' package, [@citeopendatatoronto] and R language [@citeR], along with tidyverse [@citetidyverse], knitr [@citeknitr], kableExtra [@citeakableExtra], and dplyr [@citedplyr] for document construction and producing tables and figures used.
 The dataset includes the sources of infection with Covid 19 and the episode date. Because we are only concerned with known sources of infection, we have removed the cases where source of infection was either pending or had no information. The data is collected via the Case & Contact Management System and organized by Toronto Public Health and is updated on a weekly basis. It includes both confirmed cases of Covid 19 as well as reported cases which are subject to ongoing investigation. We are analyzing the data associated with the source of infection along with the episode date, not the reported date of infection.
 
 Showing sample of dataset, (Table \@ref(tab:dataextract)).

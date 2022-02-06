@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.1.30)  6 FEB 2022 18:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.1.30)  6 FEB 2022 18:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -684,12 +684,12 @@ has been already used, duplicate ignored
                                                   \fi \fi 
 l.225 \newpage
                <./paper_files/figure-latex/plot-1.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 250.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 253.
 [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 250.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 253.
 (./paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 250.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 250.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 253.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 253.
 
 LaTeX Warning: There were undefined references.
 
@@ -698,11 +698,11 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 14618 strings out of 481239
- 212247 string characters out of 5920377
+ 14617 strings out of 481239
+ 212244 string characters out of 5920377
  505466 words of memory out of 5000000
  29505 multiletter control sequences out of 15000+600000
- 599007 words of font info for 111 fonts, out of 8000000 for 9000
+ 598924 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,9n,42p,836b,397s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
@@ -713,10 +713,10 @@ m/lmbx9.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf
 pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmri10.pfb>
-Output written on paper.pdf (5 pages, 276887 bytes).
+Output written on paper.pdf (5 pages, 277634 bytes).
 PDF statistics:
- 133 PDF objects out of 1000 (max. 8388607)
- 108 compressed objects within 2 object streams
- 22 named destinations out of 1000 (max. 500000)
+ 134 PDF objects out of 1000 (max. 8388607)
+ 109 compressed objects within 2 object streams
+ 23 named destinations out of 1000 (max. 500000)
  16419 words of extra memory for PDF output out of 17280 (max. 10000000)
 
