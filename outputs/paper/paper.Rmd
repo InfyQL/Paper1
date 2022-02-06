@@ -1,9 +1,10 @@
 ---
-title: "Covid 19, Sources of Infection in Ontario"
+title: "Covid 19, Sources of Infection in Toronto"
 author: 
   - Jonathan Goodwin
+thanks: "Code and data are available at: https://github.com/InfyQL/Paper1"
 date: "`r format(Sys.time(), '%d %B %Y')`"
-abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
+abstract: "Sources of infection are an important part of constructing health and safety guidelines concerning the ongoing Covid 19 pandemic in Toronto. We obtain data regarding the sources of infection and episode dates in the Toronto area and analyze it. We find that over time Community and Household contact have decreased and the primary source of recent infection is Healthcare Institutions and large congregation. These findings have implications for deterrmining public health and safety for prevention of further infections."
 output:
   bookdown::pdf_document2
 toc: FALSE
@@ -17,30 +18,29 @@ library(tidyverse)
 library(opendatatoronto)
 library(dplyr)
 library(knitr)
+library(kableExtra)
 ```
 
 # Introduction
 
-First paragraph
+The source of infections is an important factor in determining which measures are appropriate for attempting to alleviate the spread of Covid 19. Most common sources found in this dataset were household contact and community infections, however over the course of the the last 2 years this has changed.
 
-Second paragraph
+We analyzed the source and episode date of infections in the Toronto area during the pandemic. With (Figure 1 \@ref(fig:Chart1) as well as (Figure 2 \@ref(fig:plot)), we can determine that the absolute greatest source of infection throughout the pandemic so far has been community and hoursehold infections. However recently outbreaks in healthcare institutions as well has public congregations has been growing.
 
-Third paragraph
+The implications of this data are relevant to public health guidelines. It can be useful for making recommendations regarding what activities people may or may not want to participate in and inform the public of where infections are occuring. It may also be relevant to determining any restrictions City of Toronto may want to put in place should that be necessary.
 
-Fourth paragraph
+First we'll look at a snapshot of the data being analyzed in (Table 1 \ref@(tab:dataextract)), then we will see a breakdown of the different sources of infection and their relative proprtion in (Figure 1 \@ref(fig:Chart1)) and (Table 2 \@ref(tab:Table2)). Lastly we can look at how different sources of the infection contributed to the spread of Covid 19 in (Figure 2\@ref(fig:plot)).
 
-You can and should cross-reference sections and sub-sections. For instance, Section \@ref(data). R Markdown automatically makes the sections lower case and adds a dash to spaces to generate labels, for instance, Section \@ref(first-discussion-point). 
-
-
+\newpage
 
 # Data
 
-Data provided from the City of Toronto via the 'opendatatoronto' package, [@citeopendatatoronto] and R language [@citeR]
-The dataset includes the sources of infection with Covid 19 and the episode date. Because we are only concerned with known sources of infection, we have removed the cases where source of infection was either pending or had no information.
+Data provided from the City of Toronto via the 'opendatatoronto' package, [@citeopendatatoronto] and R language [@citeR], along with tidyverse [@citetidyverse], knitr [@citeknitr], and dplyr [@citedplyr] for document construction and producing tables and figures used.
+The dataset includes the sources of infection with Covid 19 and the episode date. Because we are only concerned with known sources of infection, we have removed the cases where source of infection was either pending or had no information. The data is collected via the Case & Contact Management System and organized by Toronto Public Health and is updated on a weekly basis. It includes both confirmed cases of Covid 19 as well as reported cases which are subject to ongoing investigation. We are analyzing the data associated with the source of infection along with the episode date, not the reported date of infection.
 
 Showing sample of dataset, (Table \@ref(tab:dataextract)).
 ```{r dataextract, echo = FALSE, warning = FALSE, message = FALSE}
-library(tidyverse)
+### Reading Data CSV and producing short sample table ###
 covid.data <- 
   read_csv(here::here("inputs/data/covid.data.csv"))
 df.with = subset(covid.data, select = c(`Source of Infection`, `Episode Date`) )
@@ -49,37 +49,47 @@ df.without = subset(covid.data, select = c(`Source of Infection`, `Episode Date`
 df.without |>
   slice(1:10) |> 
   kable(
-    caption = "First ten rows of a dataset on source of Covid 19 infection Ontario",
-  )
+    caption = "First ten rows of a dataset on source of Covid 19 infection Toronto") %>%
+  kable_styling(latex_options = "HOLD_position")
 ```
 
-Paragraph about Table \@ref(tab:dataextract)
+\newpage
 
+First wee look at the total for each source of infection throughout the entire Covid 19 pandemic and their proportion. We note that the largest contributors overall have been community and household infections.
 
-Here were are noting the the proportions of different infection sources.
-
-
-
-```{r , echo = FALSE}
+```{r Table2, echo = FALSE}
+### Creating table of proportions ###
 df.2 = subset(df.without, select = c(`Source of Infection`) )
 df.3 = filter(df.2, `Source of Infection` != "No Information", `Source of Infection` != "Pending")
 df.4 = df.3 %>% group_by(`Source of Infection`) %>%   mutate(counts = n())
-ggplot(data = df.4, aes(x = reorder(`Source of Infection`, counts))) + geom_bar(width=0.9) + ggtitle("Source of Infection") + ylab("Number of Occurences") +xlab("") + coord_flip()
-```
-
-```{r, echo = FALSE}
 prop = round(c(36793/sum(unique(df.4)$counts), 15476/sum(unique(df.4)$counts), 63829/sum(unique(df.4)$counts), 3810/sum(unique(df.4)$counts), 10440/sum(unique(df.4)$counts), 15660/sum(unique(df.4)$counts), 4117/sum(unique(df.4)$counts))*100, digits = 0)
 df.5 <- cbind(unique(df.4), as.data.frame(prop))
 df.5 |>
   arrange(desc(prop)) %>%
   kable(
     caption = "Proportion of Sources of Infection",
-  )
+  )%>%
+  kable_styling(latex_options = "HOLD_position")
 ```
 
-We are interested in how different sources of infection change over time during the Covid 19 pandemic. \@ref(tab:plot) 
+Outbreaks associated with congregation and travel were the smallest contributors to infection and the largest being community and household contact with 43% and 25% of the total infections respectively. Below we will see a visual representation of these proportions in (Figure 1 \@ref(fig: Chart1))
 
-```{r plot, echo = FALSE}
+
+```{r Chart1, echo = FALSE, fig.cap = "\\label{fig:Figure 1}"}
+### Creating Bar Chart ###
+df.2 = subset(df.without, select = c(`Source of Infection`) )
+df.3 = filter(df.2, `Source of Infection` != "No Information", `Source of Infection` != "Pending")
+df.4 = df.3 %>% group_by(`Source of Infection`) %>%   mutate(counts = n())
+ggplot(data = df.4, aes(x = reorder(`Source of Infection`, counts))) + geom_bar(width=0.9) + ggtitle("Source of Infection") + ylab("Number of Occurences") +xlab("") + coord_flip()
+```
+
+The total sources of infection are useful for analyzing the ares which have been of greatest concern for most of the spread, though they do not address fully the present concerns. It does however suggest that issues of travel have not been and should not be a concern for the City of Toronto when considering how to address the pandemic.
+\newpage
+
+We are interested in how different sources of infection change over time during the Covid 19 pandemic. We can see in (Figure 2 \@ref(fig:plot)) how the different sources of infection have changed from the start of the pandemic. 
+
+```{r plot, echo = FALSE,  fig.cap = "\\label{fig:plot}Figure 2."}
+### Creating line chart ###
 df.House <- filter(df.without, `Source of Infection` == "Household Contact")
 df.House <- df.House %>% group_by(`Episode Date`) %>% mutate(counts = n())
 
@@ -102,21 +112,23 @@ df.CloseContact <- filter(df.without, `Source of Infection` == "Close Contact")
 df.CloseContact<- df.CloseContact %>% group_by(`Episode Date`) %>% mutate(counts = n())
 
 ggplot() + 
-  geom_line(data = df.House, aes(x = `Episode Date`, y = counts), color = "red") +
-  geom_line(data = df.Community, aes(x = `Episode Date`, y = counts), color = "blue")+
-  geom_line(data = df.OutbreaksHealthcareInstitutions, aes(x = `Episode Date`, y = counts), color = "magenta")+
-  geom_line(data = df.OutbreaksOtherSettings, aes(x = `Episode Date`, y = counts), color = "green")+
-  geom_line(data = df.OutbreaksCongregateSettings, aes(x = `Episode Date`, y = counts), color = "yellow")+
-  geom_line(data = df.Travel, aes(x = `Episode Date`, y = counts), color = "purple")+
-  geom_line(data = df.CloseContact, aes(x = `Episode Date`, y = counts), color = "cyan")+
+  geom_line(data = df.House, aes(x = `Episode Date`, y = counts, color = "Household Contact")) +
+  geom_line(data = df.Community, aes(x = `Episode Date`, y = counts, color = "Community"))+
+  geom_line(data = df.OutbreaksHealthcareInstitutions, aes(x = `Episode Date`, y = counts, color = "Outbreak Healthcare"))+
+  geom_line(data = df.OutbreaksOtherSettings, aes(x = `Episode Date`, y = counts, color = "Outbreak Other"))+
+  geom_line(data = df.OutbreaksCongregateSettings, aes(x = `Episode Date`, y = counts, color = "Outbreak Congregation"))+
+  geom_line(data = df.Travel, aes(x = `Episode Date`, y = counts, color = "Travel"))+
+  geom_line(data = df.CloseContact, aes(x = `Episode Date`, y = counts, color = "Close Contact"))+
+  ggtitle("Source of Infection by Episode Date") +
+  labs(x = "Episode Date",
+         y = "Number of Occurences") +
+  scale_colour_manual("", 
+                      breaks = c("Household Contact", "Community", "Outbreak Healthcare", "Outbreak Other", "Outbreak Congregation", "Travel", "Close Contact"),
+                      values = c("red", "green", "blue", "yellow", "cyan", "magenta", "orange")) +
   scale_x_date(date_breaks = "4 month", date_labels = "%b-%y")
 ```
 
-
-
-Talk more about it.
-
-# Discussion
+By (Figure 2 \@ref(fig:plot), we can see throughout the peak of the pandemic in 2021 and in agreement with the earlier (Table 2\@ref(tab:Table2)), Community and Household contact were the primary sources of infection throughout Toronto. However more recently the primary source of infection have become Outbreaks in congregations and healthcare institutions. This finding is not particularly surprising as restrictions regarding public access to densely populated areas have loosened in recent times along with limits on capacity in public gatherings. The reduction in infections through the community and household contacts is promising for the loosening of such restrictions however outbreaks in healthcare institutions may suggest a need for more support of healthcare institutions to aleviate outbreaks.
 
 \newpage
 

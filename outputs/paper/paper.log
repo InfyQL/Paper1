@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.1.30)  6 FEB 2022 05:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.1.30)  6 FEB 2022 18:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -385,39 +385,132 @@ Package graphics Info: Driver file: pdftex.def on input line 105.
 \cslhangindent=\skip63
 \csllabelwidth=\skip64
 \cslentryspacingunit=\skip65
-(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
+\multirow@colwidth=\skip66
+\multirow@cntb=\count283
+\multirow@dima=\skip67
+\bigstrutjot=\dimen178
+) (/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen179
+\WF@size=\dimen180
+\c@WF@wrappedlines=\count284
+\WF@box=\box54
+\WF@everypar=\toks26
+Package: wrapfig 2003/01/31  v 3.6
+) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count285
+\float@exts=\toks27
+\float@box=\box55
+\@float@everytoks=\toks28
+\@floatcapt=\box56
+) (/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+\everycr=\toks29
+\minrowclearance=\skip68
+) (/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+) (/usr/share/texlive/texmf-dist/tex/latex/tabu/tabu.sty
+Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed) + inter
+mediate FMi
+(/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box57
+\sift@deathcycles=\count286
+\@vwid@loff=\dimen181
+\@vwid@roff=\dimen182
+)
+\c@taburow=\count287
+\tabu@nbcols=\count288
+\tabu@cnt=\count289
+\tabu@Xcol=\count290
+\tabu@alloc=\count291
+\tabu@nested=\count292
+\tabu@target=\dimen183
+\tabu@spreadtarget=\dimen184
+\tabu@naturalX=\dimen185
+\tabucolX=\dimen186
+\tabu@Xsum=\dimen187
+\extrarowdepth=\dimen188
+\abovetabulinesep=\dimen189
+\belowtabulinesep=\dimen190
+\tabustrutrule=\dimen191
+\tabu@thebody=\toks30
+\tabu@footnotes=\toks31
+\tabu@box=\box58
+\tabu@arstrutbox=\box59
+\tabu@hleads=\box60
+\tabu@vleads=\box61
+\tabu@cellskip=\skip69
+) (/usr/share/texlive/texmf-dist/tex/latex/threeparttable/threeparttable.sty
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box62
+) (/usr/share/texlive/texmf-dist/tex/latex/threeparttablex/threeparttablex.sty
+Package: threeparttablex 2013/07/23 v0.3 by daleif
+(/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+(/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+\TPTL@width=\skip70
+) (/usr/share/texlive/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box63
+\UL@hyphenbox=\box64
+\UL@skip=\skip71
+\UL@hook=\toks32
+\UL@height=\dimen192
+\UL@pe=\count293
+\UL@pixel=\dimen193
+\ULC@box=\box65
+Package: ulem 2019/11/18
+\ULdepth=\dimen194
+) (/usr/share/texlive/texmf-dist/tex/latex/makecell/makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen195
+\c@nlinenum=\count294
+\TeXr@lab=\toks33
+) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count283
-\l__pdf_internal_box=\box54
-) (./paper.aux)
+\l__kernel_color_stack_int=\count295
+\l__pdf_internal_box=\box66
+) (./paper.aux
+
+LaTeX Warning: Label `fig:plot' multiply defined.
+
+)
 \openout1 = `paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Info: Redefining \microtypecontext on input line 103.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Info: Redefining \microtypecontext on input line 117.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `basictext'.
-LaTeX Info: Redefining \showhyphens on input line 103.
+LaTeX Info: Redefining \showhyphens on input line 117.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -426,17 +519,17 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 (RS)
 ) (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count284
-\scratchdimen=\dimen178
-\scratchbox=\box55
-\nofMPsegments=\count285
-\nofMParguments=\count286
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count287
-\MPscratchDim=\dimen179
-\MPnumerator=\count288
-\makeMPintoPDFobject=\count289
-\everyMPtoPDFconversion=\toks27
+\scratchcounter=\count296
+\scratchdimen=\dimen196
+\scratchbox=\box67
+\nofMPsegments=\count297
+\nofMParguments=\count298
+\everyMPshowfont=\toks34
+\MPscratchCnt=\count299
+\MPscratchDim=\dimen197
+\MPnumerator=\count300
+\makeMPintoPDFobject=\count301
+\everyMPtoPDFconversion=\toks35
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -445,8 +538,8 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box56
-Package hyperref Info: Link coloring OFF on input line 103.
+\AtBeginShipoutBox=\box68
+Package hyperref Info: Link coloring OFF on input line 117.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -454,11 +547,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count290
+\c@section@level=\count302
 )
-LaTeX Info: Redefining \ref on input line 103.
-LaTeX Info: Redefining \pageref on input line 103.
-LaTeX Info: Redefining \nameref on input line 103.
+LaTeX Info: Redefining \ref on input line 117.
+LaTeX Info: Redefining \pageref on input line 117.
+LaTeX Info: Redefining \nameref on input line 117.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -494,104 +587,136 @@ LaTeX Info: Redefining \nameref on input line 103.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-05.
+19.
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-05.
+19.
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-105.
+119.
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-105.
+119.
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 105.
+(Font)              <17.28> on input line 119.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 105.
+(Font)              <12> on input line 119.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 105.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 105
+(Font)              <10> on input line 119.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 119
 .
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 105
+LaTeX Font Info:    Trying to load font information for U+msb on input line 119
 .
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
+19.
+(/usr/share/texmf/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 119.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 119.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 119.
 
-LaTeX Warning: Reference `first-discussion-point' on page 1 undefined on input 
-line 120.
+LaTeX Warning: Reference `@' on page 1 undefined on input line 132.
 
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 134.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 134.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 134.
-<paper_files/figure-latex/unnamed-chunk-1-1.pdf, id=7, 446.66875pt x 316.18124p
-t>
-File: paper_files/figure-latex/unnamed-chunk-1-1.pdf Graphic file (type pdf)
-<use paper_files/figure-latex/unnamed-chunk-1-1.pdf>
-Package pdftex.def Info: paper_files/figure-latex/unnamed-chunk-1-1.pdf  used o
-n input line 165.
-(pdftex.def)             Requested size: 446.67445pt x 316.18529pt.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 148.
+[2pdfTeX warning (ext4): destination with the same identifier (name{table.1}) h
+as been already used, duplicate ignored
 
-LaTeX Warning: Reference `tab:plot' on page 2 undefined on input line 192.
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.175 \newpage
+              ]
+<paper_files/figure-latex/Chart1-1.pdf, id=38, 446.66875pt x 316.18124pt>
+File: paper_files/figure-latex/Chart1-1.pdf Graphic file (type pdf)
+<use paper_files/figure-latex/Chart1-1.pdf>
+Package pdftex.def Info: paper_files/figure-latex/Chart1-1.pdf  used on input l
+ine 208.
+(pdftex.def)             Requested size: 446.67445pt x 316.18529pt.
+[3pdfTeX warning (ext4): destination with the same identifier (name{table.2}) h
+as been already used, duplicate ignored
 
-<paper_files/figure-latex/plot-1.pdf, id=25, 459.7175pt x 319.1925pt>
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.213 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{figure.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.213 \newpage
+               <./paper_files/figure-latex/Chart1-1.pdf>]
+<paper_files/figure-latex/plot-1.pdf, id=51, 457.71pt x 316.18124pt>
 File: paper_files/figure-latex/plot-1.pdf Graphic file (type pdf)
 <use paper_files/figure-latex/plot-1.pdf>
 Package pdftex.def Info: paper_files/figure-latex/plot-1.pdf  used on input lin
-e 194.
-(pdftex.def)             Requested size: 459.71637pt x 319.19171pt.
-[2 <./paper_files/figure-latex/unnamed-chunk-1-1.pdf>] [3 <./paper_files/figure
--latex/plot-1.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 217.
-[4]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 217.
+e 219.
+(pdftex.def)             Requested size: 457.72984pt x 316.19493pt.
+[4pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.225 \newpage
+               <./paper_files/figure-latex/plot-1.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 250.
+[5]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 250.
 (./paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 217.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 217.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 250.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 250.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 13212 strings out of 481239
- 192296 string characters out of 5920377
- 480915 words of memory out of 5000000
- 28208 multiletter control sequences out of 15000+600000
- 586335 words of font info for 80 fonts, out of 8000000 for 9000
+ 14618 strings out of 481239
+ 212247 string characters out of 5920377
+ 505466 words of memory out of 5000000
+ 29505 multiletter control sequences out of 15000+600000
+ 599007 words of font info for 111 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,8n,42p,804b,355s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/
-public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/s
-hare/texmf/fonts/type1/public/lm/lmbx9.pfb></usr/share/texmf/fonts/type1/public
-/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/tex
-mf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9
-.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb>
-Output written on paper.pdf (4 pages, 234082 bytes).
+ 41i,9n,42p,836b,397s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
+ips/lm/lm-ts1.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/shar
+e/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/l
+m/lmbx9.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf
+/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.
+pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/ty
+pe1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/s
+hare/texmf/fonts/type1/public/lm/lmri10.pfb>
+Output written on paper.pdf (5 pages, 276887 bytes).
 PDF statistics:
- 107 PDF objects out of 1000 (max. 8388607)
- 86 compressed objects within 1 object stream
- 18 named destinations out of 1000 (max. 500000)
- 14379 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 133 PDF objects out of 1000 (max. 8388607)
+ 108 compressed objects within 2 object streams
+ 22 named destinations out of 1000 (max. 500000)
+ 16419 words of extra memory for PDF output out of 17280 (max. 10000000)
 
