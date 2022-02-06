@@ -1,8 +1,8 @@
 #### Preamble ####
-# Purpose: Clean the survey data downloaded from [...UPDATE ME!!!!!]
-# Author: Rohan Alexander [CHANGE THIS TO YOUR NAME!!!!]
-# Data: 3 January 2021
-# Contact: rohan.alexander@utoronto.ca [PROBABLY CHANGE THIS ALSO!!!!]
+# Purpose: Clean the data from opendatatoronto
+# Author: Jonathan Goodwin
+# Data: 29 January 2021
+# Contact: jon.goodwin@mail.utoronto.ca
 # License: MIT
 # Pre-requisites: 
 # - Need to have downloaded the ACS data and saved it to inputs/data
@@ -13,24 +13,22 @@
 
 #### Workspace setup ####
 # Use R Projects, not setwd().
-library(haven)
+library(opendatatoronto)
 library(tidyverse)
-# Read in the raw data. 
-raw_data <- readr::read_csv("inputs/data/raw_data.csv"
-                     )
-# Just keep some variables that may be of interest (change 
-# this depending on your interests)
-names(raw_data)
+library(dplyr)
 
-reduced_data <- 
-  raw_data %>% 
-  select(first_col, 
-         second_col)
-rm(raw_data)
-         
+### Data Download ###
 
-#### What's next? ####
+# Taken from https://open.toronto.ca/dataset/covid-19-cases-in-toronto/
 
+# get all resources for this package
+resources <- list_package_resources("64b54586-6180-4485-83eb-81e8fae3b8fe")
 
+# load the first datastore resource as a sample
+covid.data <- 
+  resources %>%
+  get_resource()
 
-         
+### Save data as csv ###
+
+write_csv(covid.data, "inputs/data/covid.data.csv")

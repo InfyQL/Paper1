@@ -1,9 +1,7 @@
 ---
-title: "My title"
-subtitle: "My subtitle if needed"
+title: "Covid 19 Sources of Infection"
 author: 
-  - First author
-  - Another author
+  - Jonathan Goodwin
 thanks: "Code and data are available at: LINK."
 date: "`r format(Sys.time(), '%d %B %Y')`"
 abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
@@ -17,10 +15,21 @@ bibliography: references.bib
 knitr::opts_chunk$set(echo = TRUE)
 
 library(tidyverse)
+library(opendatatoronto)
+library(dplyr)
 library(palmerpenguins)
+library(knitr)
 ```
 
 # Introduction
+
+First paragraph
+
+Second paragraph
+
+Third paragraph
+
+Fourth paragraph
 
 You can and should cross-reference sections and sub-sections. For instance, Section \@ref(data). R Markdown automatically makes the sections lower case and adds a dash to spaces to generate labels, for instance, Section \@ref(first-discussion-point). 
 
@@ -28,17 +37,83 @@ You can and should cross-reference sections and sub-sections. For instance, Sect
 
 # Data
 
-Our data is of penguins (Figure \@ref(fig:bills)).
+The dataset includes the sources of infection with Covid 19 and the episode date. Because we are only concerned with known sources of infection, we have removed the cases where source of infection was either pending or had no information.
 
-```{r bills, fig.cap="Bills of penguins", echo = FALSE}
-ggplot(penguins, aes(x = island, fill = species)) +
-  geom_bar(alpha = 0.8) +
-  scale_fill_manual(values = c("darkorange","purple","cyan4"),
-                    guide = FALSE) +
-  theme_minimal() +
-  facet_wrap(~species, ncol = 1) +
-  coord_flip()
+Showing sample of dataset, (Table \@ref(tab:dataextract)).
+```{r dataextract, echo = FALSE, warning = FALSE, message = FALSE}
+library(tidyverse)
+covid.data <- 
+  read_csv(here::here("inputs/data/covid.data.csv"))
+df.with = subset(covid.data, select = c(`Source of Infection`, `Episode Date`) )
+df.without = subset(covid.data, select = c(`Source of Infection`, `Episode Date`) ) %>%
+  filter(`Source of Infection` != "No Information", `Source of Infection` != "Pending")
+df.without |>
+  slice(1:10) |> 
+  kable(
+    caption = "First ten rows of a dataset on source of Covid 19 infection Ontario",
+  )
 ```
+
+Paragraph about Table \@ref(tab:dataextract)
+
+
+Here were are noting the the proportions of different infection sources.
+
+
+
+```{r , echo = FALSE}
+df.2 = subset(df.without, select = c(`Source of Infection`) )
+df.3 = filter(df.2, `Source of Infection` != "No Information", `Source of Infection` != "Pending")
+df.4 = df.3 %>% group_by(`Source of Infection`) %>%   mutate(counts = n())
+ggplot(data = df.4, aes(x = reorder(`Source of Infection`, counts))) + geom_bar(width=0.9) + ggtitle("Source of Infection") + ylab("Number of Occurences") +xlab("") + coord_flip()
+```
+
+```{r, echo = FALSE}
+prop = round(c(36793/sum(unique(df.4)$counts), 15476/sum(unique(df.4)$counts), 63829/sum(unique(df.4)$counts), 3810/sum(unique(df.4)$counts), 10440/sum(unique(df.4)$counts), 15660/sum(unique(df.4)$counts), 4117/sum(unique(df.4)$counts))*100, digits = 0)
+df.5 <- cbind(unique(df.4), as.data.frame(prop))
+df.5 |>
+  arrange(desc(prop)) %>%
+  kable(
+    caption = "Proportion of Sources of Infection",
+  )
+```
+
+We are interested in how different sources of infection change over time during the Covid 19 pandemic. \@ref(tab:plot) 
+
+```{r plot, echo = FALSE}
+df.House <- filter(df.without, `Source of Infection` == "Household Contact")
+df.House <- df.House %>% group_by(`Episode Date`) %>% mutate(counts = n())
+
+df.OutbreaksCongregateSettings <- filter(df.without, `Source of Infection` == "Outbreaks, Congregate Settings")
+df.OutbreaksCongregateSettings <- df.OutbreaksCongregateSettings %>% group_by(`Episode Date`) %>% mutate(counts = n())
+
+df.OutbreaksHealthcareInstitutions <- filter(df.without, `Source of Infection` == "Outbreaks, Healthcare Institutions")
+df.OutbreaksHealthcareInstitutions <- df.OutbreaksHealthcareInstitutions %>% group_by(`Episode Date`) %>% mutate(counts = n())
+
+df.OutbreaksOtherSettings <- filter(df.without, `Source of Infection` == "Outbreaks, Other Settings")
+df.OutbreaksOtherSettings <- df.OutbreaksOtherSettings %>% group_by(`Episode Date`) %>% mutate(counts = n())
+
+df.Travel <- filter(df.without, `Source of Infection` == "Travel")
+df.Travel <- df.Travel %>% group_by(`Episode Date`) %>% mutate(counts = n())
+
+df.Community <- filter(df.without, `Source of Infection` == "Community")
+df.Community <- df.Community %>% group_by(`Episode Date`) %>% mutate(counts = n())
+
+df.CloseContact <- filter(df.without, `Source of Infection` == "Close Contact")
+df.CloseContact<- df.CloseContact %>% group_by(`Episode Date`) %>% mutate(counts = n())
+
+ggplot() + 
+  geom_line(data = df.House, aes(x = `Episode Date`, y = counts), color = "red") +
+  geom_line(data = df.Community, aes(x = `Episode Date`, y = counts), color = "blue")+
+  geom_line(data = df.OutbreaksHealthcareInstitutions, aes(x = `Episode Date`, y = counts), color = "magenta")+
+  geom_line(data = df.OutbreaksOtherSettings, aes(x = `Episode Date`, y = counts), color = "green")+
+  geom_line(data = df.OutbreaksCongregateSettings, aes(x = `Episode Date`, y = counts), color = "yellow")+
+  geom_line(data = df.Travel, aes(x = `Episode Date`, y = counts), color = "purple")+
+  geom_line(data = df.CloseContact, aes(x = `Episode Date`, y = counts), color = "cyan")+
+  scale_x_date(date_breaks = "4 month", date_labels = "%b-%y")
+```
+
+
 
 Talk more about it.
 
